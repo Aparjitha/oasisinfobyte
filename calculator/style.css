@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'calculatorfont';
+    src: url('fontstyl.woff.ttf') format('woff');
+
+}
+*{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 45px;
+    background-color: #ffffff;
+    outline: none;
+}
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: repeat(4,68px);                  
+}
+.display {
+    text-size-adjust: 20%;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'calculatorfont', digital-7;
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #fff;
+    border: none;     
+    border-radius: 30px;             
+    color: #000;
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+button{
+    height: 50px;
+    width: 50px;
+    background-color:#575555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin: 6px;
+    font-size: 30px;
+    font-family: 'calculatorfont', digital-7;              
+}
+.equal{
+    width: 115px;
+    border-radius: 5px;
+    background-color: 75555;
+}

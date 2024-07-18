@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en">
+
+<head>
+    <meta charset = "UTF -8">
+    <meta http-equiv="X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content ="width= device-width,initial-scale=1.0">
+    <title>To Do List</title> 
+    <link rel="icon" href="icon.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <h1>To Do List</h1>
+        <div class="input-container">
+            <input class="todo-input" placeholder="Add a new task...">
+            <button class="add-button">
+                <i class='bx bxs-plus-circle'></i>
+            </button>
+        </div>
+        <div class="error">Task already exists!</div>
+        <div class ="filters">
+            <div class="filter active" data-filter="all">All</div>
+            <div class="filter" data-filter="completed" >Completed</div>
+            <div class="filter" data-filter="pending" >Pending</div>
+            <div class="delete-all">Delete All</div>
+        </div>
+        <div class="todos-container">
+            <ul class="todos"></ul>
+            <img class="empty-image" src="./todoim.png">
+        </div>
+    </div>
+    <div id="deletemodal" class="modal">
+        <div class="modal-content">
+            <p>Are you sure you want to delete all the tasks?</p>
+            <button id="confirm">Yes</button>
+            <button id="cancel">No</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>

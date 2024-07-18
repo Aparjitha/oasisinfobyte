@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wandertheworld</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="name">
+                <p>WANDER THE WORLD</p>
+            </div>
+            <div class="nav-button">
+                <button class="button white-btn" id="loginbtn" onclick="login()">Sign In</button>
+                <button class="button" id="registerbtn" onclick="register()">Sign Up</button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="login-con" id="login">
+                <header>Login</header>
+                <div class="ip-box">
+                    <input type="text" class="ip-field" placeholder="Username or Email" id="login-username">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="ip-box">
+                    <input type="password" class="ip-field" placeholder="Password" id="login-password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="ip-box">
+                    <input type="checkbox" onclick="togglePassword('login-password')" id="show-pw-login">
+                    <label for="show-pw-login" class="show-pw-label">Show Password</label>
+                </div>
+                <div class="ip-box">
+                    <input type="submit" class="submit" value="Sign In" onclick="signIn()" disabled>
+                </div>
+                <div class="two-column">
+                    <div class="two">
+                        <label><a href="#" onclick="forgotPassword()">Forgot password?</a></label>
+                    </div>
+                </div>
+                <div class="top">
+                    <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                </div>
+                
+            </div>
+            <div class="register-con" id="register">
+                <header>Sign Up</header>
+                <div class="two-forms">
+                    <div class="ip-box">
+                        <input type="text" class="ip-field" placeholder="firstname" id="register-firstname">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="ip-box">
+                        <input type="text" class="ip-field" placeholder="lastname" id="register-lastname">
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
+                <div class="ip-box">
+                    <input type="text" class="ip-field" placeholder="Email" id="register-email">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="ip-box">
+                    <input type="password" class="ip-field" placeholder="Password" id="register-password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="ip-box">
+                    <input type="checkbox" onclick="togglePassword('register-password')" id="show-pw-register">
+                    <label for="show-pw-register" class="show-pw-label">Show Password</label>
+                </div>
+                <div class="ip-box">
+                    <input type="submit" class="submit" value="Register" onclick="registerUser()">
+                </div>
+                <div class="two-column">
+                    <div class="two">
+                        <label><a href='#'>Terms & Conditions</a></label>
+                    </div>
+                </div>
+                <div class="top">
+                    <span>Have an account? <a href='#' onclick="login()">Login</a></span>
+                </div>
+            </div>
+            <div class="forgot-con" id="forgot" style="display: none;">
+                <header>Forgot Password</header>
+                <div class="ip-box">
+                    <input type="text" class="ip-field" placeholder="Username or Email" id="forgot-username">
+                </div>
+                <div class="ip-box">
+                    <input type="password" class="ip-field" placeholder="New Password" id="forgot-password">
+                </div>
+                <div class="ip-box">
+                    <input type="checkbox" onclick="togglePassword('forgot-password')" id="show-pw-forgot">
+                    <label for="show-pw-forgot" class="show-pw-label">Show Password</label>
+                </div>
+                <div class="ip-box">
+                    <input type="submit" class="submit" value="Reset Password" onclick="resetPassword()">
+                </div>
+            </div>
+            <div class="success-msg" id="successmes" style="display: none;">
+                <header>Welcome</header>
+                <p>You have successfully signed in!</p>
+                <input type="button" value="Explore" class="button-ok" onclick="location.href = 'page.html';">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-text">
+            <p>Copyright &copy; Wander The World|All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script1.js"></script>
+</body>
